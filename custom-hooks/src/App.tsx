@@ -1,6 +1,7 @@
 import "./App.css";
 import { useState } from "react";
-import UseInput from "./components/useInput";
+import UseInput from "./components/UseInput";
+import UseTabs from "./components/UseTabs";
 
 function App() {
   const [hook, setHook] = useState<string | null>(null);
@@ -14,7 +15,11 @@ function App() {
       <button onClick={handleHook} value="useInput">
         useInput
       </button>
+      <button onClick={handleHook} value="useTabs">
+        useTabs
+      </button>
       {hook === "useInput" && <UseInput />}
+      {hook === "useTabs" && <UseTabs />}
     </>
   );
 }
