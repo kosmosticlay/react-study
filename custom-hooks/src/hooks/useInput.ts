@@ -1,3 +1,4 @@
+/* 입력값을 검증하여 유효한 값만 상태로 업데이트 */
 import { useState } from "react";
 
 export default function useInput(
