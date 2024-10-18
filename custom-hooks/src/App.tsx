@@ -4,6 +4,7 @@ import UseInput from "./components/UseInput";
 import UseTabs from "./components/UseTabs";
 import UseTitle from "./components/UseTitle";
 import UseClick from "./components/UseClick";
+import UtilityFunc from "./components/UtilityFunc";
 
 function App() {
   const [hook, setHook] = useState<string | null>(null);
@@ -26,10 +27,14 @@ function App() {
       <button onClick={handleHook} value="useClick">
         useClick
       </button>
+      <button onClick={handleHook} value="utility">
+        Utility Functions
+      </button>
       {hook === "useInput" && <UseInput />}
       {hook === "useTabs" && <UseTabs />}
       {hook === "useTitle" && <UseTitle />}
       {hook === "useClick" && <UseClick />}
+      {hook === "utility" && <UtilityFunc />}
     </>
   );
 }
